@@ -36,7 +36,7 @@ become the new richest.
 
         mapping (address => uint) pendingWithdrawals;
 
-        constructor() public payable {
+        constructor() public payable     {
             richest = msg.sender;
             mostSent = msg.value;
         }
@@ -68,7 +68,7 @@ This is as opposed to the more intuitive sending pattern:
     pragma solidity >0.4.24;
 
     contract SendContract {
-        address public richest;
+        address payable public richest;
         uint public mostSent;
 
         constructor() public payable {
